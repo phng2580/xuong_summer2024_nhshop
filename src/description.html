@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+        <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+    <link rel="stylesheet" href="./style.scss" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="" class="header__logo">
+                    <img src="../assets/logo.svg" alt="" />
+                </a>
+                <div class="button-mobile"><button>=</button></div>
+                <nav class="main-menu">
+                    <ul class="main-menu__list">
+                        <li class="main-menu__item">
+                            <a href="../index.html" class="main-menu__link">Home</a>
+                        </li>
+                        <li class="main-menu__item">
+                            <a href="/src/shop.html" class="main-menu__link">Shop</a>
+                        </li>
+                        <li class="main-menu__item">
+                            <a href="" class="main-menu__link">About</a>
+                        </li>
+                        <li class="main-menu__item">
+                            <a href="" class="main-menu__link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header-items">
+                    <div class="header-item-user">
+                        <span><img src="../assets/icons/1.svg" /></span>
+                    </div>
+                    <div class="header-item-user">
+                        <span><img src="../assets/icons/2.svg" /></span>
+                    </div>
+                    <div class="header-item-user">
+                        <span><img src="../assets/icons/3.svg" /></span>
+                    </div>
+                    <div class="header-item-user">
+                        <span><a href="/src/cart.html"><img src="../assets/icons/4.svg" /></a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="banner">
+        <img src="https://picsum.photos/id/10/1440/500" alt="" class="banner__img" />
+ .   </section>
+    <!--End .banner-->
+    <section class="product-show flex justify-center space-x-24 p-14">
+        <div class="flex w-7/12">
+            <div class="flex flex-col w-1/4">
+                <img class="cursor-pointer mb-2" src="https://picsum.photos/id/10/1440/500"
+                    onclick="changeImage('small_image1.jpg')" alt="Small Image 1">
+                <img class="cursor-pointer mb-2" src="https://picsum.photos/id/10/1440/500"
+                    onclick="changeImage('small_image2.jpg')" alt="Small Image 2">
+                <img class="cursor-pointer mb-2" src="https://picsum.photos/id/10/1440/500"
+                    onclick="changeImage('small_image3.jpg')" alt="Small Image 3">
+                <img class="cursor-pointer mb-2" src="https://picsum.photos/id/10/1440/500"
+                    onclick="changeImage('small_image4.jpg')" alt="Small Image 4">
+            </div>
+            <div class="flex-grow ml-4 w-52 h-auto">
+                <img id="largeImage" src="https://picsum.photos/id/10/1440/500" alt="Large Image">
+            </div>
+        </div>
+
+
+        <div class="flex font-sans">
+            <form class="flex-auto ">
+                <div class="flex flex-wrap">
+                    <h1 class="flex-auto text-lg font-semibold text-slate-900">
+                        Asgaard sofa
+                    </h1>
+                    <div class="w-full flex-none text-sm font-medium text-slate-700 mt-2">
+                        25.000.000đ
+                    </div>
+                </div>
+                <div class="flex items-baseline mt-4 mb-6 pb-6 border-b border-slate-200">
+                    <div class="space-x-2 flex text-sm">
+                        <label>
+                            <input class="sr-only peer" name="size" type="radio" value="xs" checked />
+                            <div
+                                class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
+                                XS
+                            </div>
+                        </label>
+                        <label>
+                            <input class="sr-only peer" name="size" type="radio" value="s" />
+                            <div
+                                class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
+                                S
+                            </div>
+                        </label>
+                        <label>
+                            <input class="sr-only peer" name="size" type="radio" value="m" />
+                            <div
+                                class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
+                                M
+                            </div>
+                        </label>
+                        <label>
+                            <input class="sr-only peer" name="size" type="radio" value="l" />
+                            <div
+                                class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
+                                L
+                            </div>
+                        </label>
+                        <label>
+                            <input class="sr-only peer" name="size" type="radio" value="xl" />
+                            <div
+                                class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
+                                XL
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="flex space-x-4 mb-6 text-sm font-medium">
+                    <div class="flex-auto flex space-x-4">
+                        <style>
+                            .btn-buy {
+                                position: relative;
+                                transition: transform 0.3s ease;
+                            }
+                        
+                            .btn-buy:hover {
+                                transform: translateY(-10px);
+                            }
+                        </style>
+                        
+                        <a href="./checkout.html" class="btn-buy h-10 px-6 font-semibold rounded-md bg-black text-white flex items-center justify-center" type="submit">
+                            Buy now
+                        </a>
+                        <button class="h-10 px-6 font-semibold rounded-md border border-slate-200 text-slate-900"
+                            type="button">
+                            Add to cart
+                        </button>
+                    </div>
+                    <button
+                        class="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border border-slate-200"
+                        type="button" aria-label="Like">
+                        <svg width="20" height="20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
+                        </svg>
+                    </button>
+                </div>
+                <p class="text-sm text-slate-700">
+                    SKU:SS001
+                </p>
+                <p class="text-sm text-slate-700">
+                    Category: Sofas
+                </p>
+                <p class="text-sm text-slate-700">
+                    Tags: Sofa, Chair, Home, Shop
+                </p>
+                <p class="text-sm text-slate-700">
+                    Share: <img src="../assets/icons/14" alt=""><img src="../assets/icons/15" alt=""><img
+                        src="../assets/icons/16" alt="">
+                </p>
+            </form>
+        </div>
+    </section>
+
+
+    <div class="container border-black">
+        <hr />
+    </div>
+    <nav class="mt-10">
+        <ul class="main-menu__list flex space-x-10 font-semibold justify-center">
+            <li class="main-menu__item">
+                <a href="../index.html " class="main-menu__link text-lg">Description</a>
+            </li>
+            <li class="main-menu__item">
+                <a href="/shop.html" class="main-menu__link text-lg text-black text-opacity-50">Additional
+                    Information</a>
+            </li>
+            <li class="main-menu__item">
+                <a href="" class="main-menu__link text-lg text-black text-opacity-50">Reviews [5]</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="description-text w-full">
+        <div class="w-10/12 pl-72">
+            <p class="text-black text-opacity-50">Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn
+                portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords,
+                and takes the show on the road.</p>
+            <p class="text-black text-opacity-50">Weighing in under 7 pounds, the Kilburn is a lightweight piece of
+                vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is
+                a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended
+                highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the
+                controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish
+                travel.</p>
+        </div>
+    </div>
+
+    <div class="img-product-description w-full justify-center flex space-x-10 mt-10 mb-10">
+        <img src="https://picsum.photos/id/10/1440/500" width="605px" alt="">
+        <img src="https://picsum.photos/id/10/1440/500" width="605px" alt="">
+    </div>
+    <hr>
+    <!--End .news-->
+    <div class="w-full text-center mt-10">
+        <h1 class="text-2xl font-bold">Related Products</h1>
+    </div>
+
+    <section class="news">
+        <div class="container mt-12 mx-auto">
+            <div class="section-body">
+                <div class="product-list flex justify-center space-x-6">
+                    <div class="product-item relative">
+                        <div class="product-image relative">
+                            <img src="https://picsum.photos/id/10/300/300" alt="" class="product__thumbnail" />
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product__name">
+                                <a href="" class="product__link">Syltherine</a>
+                            </h3>
+                            <a href="" class="product__category">Stylish cafe chair</a>
+                            <div class="product-price">
+                                <span class="product-price__new">$200</span>
+                                <span class="product-price__old">$300</span>
+                            </div>
+                        </div>
+                        <div
+                            class="product-actions opacity-0 absolute top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 transition-opacity duration-300 hover:opacity-100 flex items-center justify-center">
+                            <button class="btn product-action__quickview text-white">Quick View</button>
+                            <button class="btn product-action__addtocart text-white">Add To Cart</button>
+                            <div class="product-actions-more text-white">
+                                <span class="product-action__share">Share</span>
+                                <span class="product-action__compare">Compare</span>
+                                <span class="product-action__like">Like</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- end item -->
+                    <div class="product-item relative">
+                        <div class="product-image relative">
+                            <img src="https://picsum.photos/id/10/300/300" alt="" class="product__thumbnail" />
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product__name">
+                                <a href="" class="product__link">Syltherine</a>
+                            </h3>
+                            <a href="" class="product__category">Stylish cafe chair</a>
+                            <div class="product-price">
+                                <span class="product-price__new">$200</span>
+                                <span class="product-price__old">$300</span>
+                            </div>
+                        </div>
+                        <div
+                            class="product-actions opacity-0 absolute top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 transition-opacity duration-300 hover:opacity-100 flex items-center justify-center">
+                            <button class="btn product-action__quickview text-white">Quick View</button>
+                            <button class="btn product-action__addtocart text-white">Add To Cart</button>
+                            <div class="product-actions-more text-white">
+                                <span class="product-action__share">Share</span>
+                                <span class="product-action__compare">Compare</span>
+                                <span class="product-action__like">Like</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end item -->
+                    <div class="product-item relative">
+                        <div class="product-image relative">
+                            <img src="https://picsum.photos/id/10/300/300" alt="" class="product__thumbnail" />
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product__name">
+                                <a href="" class="product__link">Syltherine</a>
+                            </h3>
+                            <a href="" class="product__category">Stylish cafe chair</a>
+                            <div class="product-price">
+                                <span class="product-price__new">$200</span>
+                                <span class="product-price__old">$300</span>
+                            </div>
+                        </div>
+                        <div
+                            class="product-actions opacity-0 absolute top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 transition-opacity duration-300 hover:opacity-100 flex items-center justify-center">
+                            <button class="btn product-action__quickview text-white">Quick View</button>
+                            <button class="btn product-action__addtocart text-white">Add To Cart</button>
+                            <div class="product-actions-more text-white">
+                                <span class="product-action__share">Share</span>
+                                <span class="product-action__compare">Compare</span>
+                                <span class="product-action__like">Like</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end item -->
+                    <div class="product-item relative">
+                        <div class="product-image relative">
+                            <img src="https://picsum.photos/id/10/300/300" alt="" class="product__thumbnail" />
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product__name">
+                                <a href="" class="product__link">Syltherine</a>
+                            </h3>
+                            <a href="" class="product__category">Stylish cafe chair</a>
+                            <div class="product-price">
+                                <span class="product-price__new">$200</span>
+                                <span class="product-price__old">$300</span>
+                            </div>
+                        </div>
+                        <div
+                            class="product-actions opacity-0 absolute top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 transition-opacity duration-300 hover:opacity-100 flex items-center justify-center">
+                            <button class="btn product-action__quickview text-white">Quick View</button>
+                            <button class="btn product-action__addtocart text-white">Add To Cart</button>
+                            <div class="product-actions-more text-white">
+                                <span class="product-action__share">Share</span>
+                                <span class="product-action__compare">Compare</span>
+                                <span class="product-action__like">Like</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end item -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services mt-10">
+        <div class="container-fluid">
+            <div class="service-list">
+                <div class="service-item">
+                    <img src="../assets/icons/10.svg" class="service__image" />
+                    <div class="service-info">
+                        <h4 class="service__name">High Quality</h4>
+                        <p class="service__description">crafted from top materials</p>
+                    </div>
+                </div>
+                <!--End service-item-->
+                <div class="service-item">
+                    <img src="../assets/icons/11.svg" class="service__image" />
+                    <div class="service-info">
+                        <h4 class="service__name">High Quality</h4>
+                        <p class="service__description">crafted from top materials</p>
+                    </div>
+                </div>
+                <!--End service-item-->
+                <div class="service-item">
+                    <img src="../assets/icons/12.svg" class="service__image" />
+                    <div class="service-info">
+                        <h4 class="service__name">High Quality</h4>
+                        <p class="service__description">crafted from top materials</p>
+                    </div>
+                </div>
+                <!--End service-item-->
+                <div class="service-item">
+                    <img src="../assets/icons/13.svg" class="service__image" />
+                    <div class="service-info">
+                        <h4 class="service__name">High Quality</h4>
+                        <p class="service__description">crafted from top materials</p>
+                    </div>
+                </div>
+                <!--End service-item-->
+            </div>
+        </div>
+    </section>
+    <!--End .services-->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-list">
+                <div class="footer-item">
+                    <img src="../assets/logo.svg" alt="" />
+                    <p class="footer__address">
+                        400 University Drive Suite 200 Coral Gables, FL 33134 USA
+                    </p>
+                </div>
+                <div class="footer-nav">
+                    <div class="footer-item">
+                        <h2 class="footer__title ">Links</h2>
+                        <ul class="footer-menu-list">
+                            <li class="footer-menu-item">
+                                <a href="" class="footer-menu-link">Home</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a href="" class="footer-menu-link">Shop</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a href="" class="footer-menu-link">Blog</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a href="" class="footer-menu-link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-item">
+                        <h2 class="footer__title">Help</h2>
+                        <ul class="footer-menu-list">
+                            <li class="footer-menu-item">
+                                <a href="" class="footer-menu-link">Payment Options</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a href="" class="footer-menu-link">Returns</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a href="" class="footer-menu-link">Privacy Policies</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a href="" class="footer-menu-link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-item">
+                    <h2 class="footer__title">Newsletter</h2>
+                    <form action="" class="newsletter">
+                        <input type="text" class="newsletter__input" placeholder="Enter Your Email Address" />
+                        <button class="newsletter__btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <p class="copyright pl-48">2023 furino. All rights reverved</p>
+        </div>
+    </footer>
+</body>
+
+</html>
